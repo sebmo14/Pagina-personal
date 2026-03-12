@@ -1,0 +1,198 @@
+/* ===== RESET BÁSICO ===== */
+/* Quita márgenes y padding que los navegadores agregan por defecto */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ===== ESTILO GENERAL DE LA PÁGINA ===== */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#222;
+    line-height:1.6;
+}
+
+
+/* ===== CONTENEDOR CENTRAL ===== */
+/* Limita el ancho y centra el contenido */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px;
+}
+
+
+/* ===== ESPACIO ENTRE SECCIONES ===== */
+
+section{
+    padding:80px 0;
+}
+
+
+/* ===== TITULOS DE SECCIONES ===== */
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+
+/* ===== HEADER ===== */
+
+.header{
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* ===== ORGANIZAR HEADER CON FLEXBOX ===== */
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+
+.nav-list{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+
+/* ===== LINKS DEL MENÚ ===== */
+
+.nav a{
+    text-decoration:none;
+    color:#222;
+    font-weight:bold;
+}
+
+
+/* ===== EFECTO HOVER EN MENÚ ===== */
+
+.nav a:hover{
+    color:#2563eb;
+}
+
+
+/* ===== HERO (SECCIÓN PRINCIPAL) ===== */
+
+.hero{
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.foto-perfil{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+
+/* ===== GRID DE HABILIDADES ===== */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+
+/* ===== TARJETAS DE HABILIDADES ===== */
+
+.skill-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* ===== GRID DE PROYECTOS ===== */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+
+/* ===== TARJETAS DE PROYECTOS ===== */
+
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:transform 0.2s;
+}
+
+
+/* ===== ANIMACIÓN HOVER PROYECTOS ===== */
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+
+/* ===== LISTA DE INTERESES ===== */
+
+.intereses-list{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+
+/* ===== TARJETAS DE INTERESES ===== */
+
+.intereses-list li{
+    background:white;
+    padding:15px 25px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    transition:transform 0.2s;
+}
+
+
+/* ===== HOVER EN INTERESES ===== */
+
+.intereses-list li:hover{
+    transform:translateY(-4px);
+}
+
+
+/* ===== SECCIÓN CONTACTO ===== */
+
+.contacto{
+    text-align:center;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
