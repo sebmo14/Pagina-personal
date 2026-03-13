@@ -1,3 +1,8 @@
+html{
+  scroll-behavior: smooth;
+  scroll-initial-target: nearest;
+}
+
 /* ===== RESET BÁSICO ===== */
 /* Quita márgenes y padding que los navegadores agregan por defecto */
 
@@ -67,6 +72,7 @@ h2{
     list-style:none;
     display:flex;
     gap:25px;
+    user-select: none;
 }
 
 
@@ -89,7 +95,7 @@ h2{
 /* ===== HERO (SECCIÓN PRINCIPAL) ===== */
 
 .hero{
-    background:linear-gradient(135deg,#2563eb,#60a5fa);
+    background:linear-gradient(135deg,#4624c0,#c20eb379);
     color:white;
     text-align:center;
     padding:120px 20px;
@@ -168,14 +174,15 @@ h2{
     padding:15px 25px;
     border-radius:10px;
     box-shadow:0 3px 8px rgba(0,0,0,0.1);
-    transition:transform 0.2s;
+    transition:transform 0.6s;
 }
 
 
 /* ===== HOVER EN INTERESES ===== */
 
 .intereses-list li:hover{
-    transform:translateY(-4px);
+    transform:translateY(-10px);
+   
 }
 
 
@@ -195,4 +202,77 @@ h2{
     padding:30px;
     margin-top:50px;
 }
+
+/* ===== Indice colapsabe fijo =====  */
+
+.indice{
+  position:fixed;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  font-family:sans-serif;
+}
+
+.indice details{
+  position:relative;
+}
+
+/* BOTON */
+.indice summary{
+  position:absolute;
+  right:100%;
+  top:0;
+  height: 184px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  background:#333333;
+  color:white;
+  padding:10px 6px;
+  cursor:pointer;
+
+  border-radius:8px 0 0 8px;
+
+}
+
+/* MENU */
+.indice ul{
+  background:#867550;
+  padding:10px;
+  margin:0;
+  list-style:none;
+  min-width:140px;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  
+  
+}
+
+.indice li{
+  margin:6px 0;
+}
+
+.indice a{
+  text-decoration:none;
+  color:#ffffff;
+}
+
+.indice a:hover{
+  color:#08080870;
+}
+
+.indice summary:hover{
+  background:#333333;
+}
+
+.indice details[open] ul{
+  max-height: 500px;
+  opacity: 1;
+  overflow: visible;
+  min-height: 140px;
+}
+
 
