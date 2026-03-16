@@ -17,9 +17,20 @@ html{
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
-    color:#222;
+    background:#121212;
+    color:#e0e0e0;
     line-height:1.6;
+}
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: #d8b4fe;
+    text-shadow: 0 0 8px rgba(187,134,252,0.4);
 }
 
 
@@ -51,9 +62,32 @@ h2{
 
 /* ===== HEADER ===== */
 
+header {
+    background: #1e1e1e;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-bottom: 1px solid #333;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #bb86fc, #f178b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header h4 {
+    color: #a0a0a0;
+    font-weight: normal;
+}
+
 .header{
-    background:white;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    background:#1e1e1e;
+    box-shadow:0 2px 8px rgba(0,0,0,0.3);
 }
 
 
@@ -95,16 +129,17 @@ h2{
 /* ===== HERO (SECCIÓN PRINCIPAL) ===== */
 
 .hero{
-    background:linear-gradient(135deg,#4624c0,#c20eb379);
-    color:white;
+    background:linear-gradient(135deg, rgba(31,17,71,0.8), rgba(59,9,54,0.8));
+    color:#f5f5f5;
     text-align:center;
     padding:120px 20px;
+    border-bottom: 1px solid #333;
 }
 
 .foto-perfil{
     width:150px;
     height:150px;
-    border-radius:50%;
+    border-radius:50%;  
     object-fit:cover;
     margin-bottom:20px;
 }
@@ -122,10 +157,18 @@ h2{
 /* ===== TARJETAS DE HABILIDADES ===== */
 
 .skill-card{
-    background:white;
+    background:#1e1e1e;
     padding:20px;
     border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    border: 1px solid #333;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.6);
+    border-color: #bb86fc;
 }
 
 
@@ -141,18 +184,21 @@ h2{
 /* ===== TARJETAS DE PROYECTOS ===== */
 
 .project-card{
-    background:white;
+    background:#1e1e1e;
     padding:25px;
     border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    transition:transform 0.2s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    transition:transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 1px solid #333;
 }
 
 
 /* ===== ANIMACIÓN HOVER PROYECTOS ===== */
 
 .project-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+    box-shadow:0 12px 20px rgba(0,0,0,0.6);
+    border-color: #bb86fc;
 }
 
 
@@ -170,19 +216,103 @@ h2{
 /* ===== TARJETAS DE INTERESES ===== */
 
 .intereses-list li{
-    background:white;
+    background:#1e1e1e;
     padding:15px 25px;
     border-radius:10px;
-    box-shadow:0 3px 8px rgba(0,0,0,0.1);
-    transition:transform 0.6s;
+    box-shadow:0 3px 8px rgba(0,0,0,0.4);
+    transition:transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+    border: 1px solid #333;
 }
 
 
 /* ===== HOVER EN INTERESES ===== */
 
 .intereses-list li:hover{
-    transform:translateY(-10px);
-   
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 10px 20px rgba(187,134,252,0.2);
+    border-color: #bb86fc;
+}
+
+/* ===== Botones de contacto ===== */
+.button{
+    background:#570d4d;
+    padding:15px 25px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.4);
+    transition:transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+/* From Uiverse.io by nikk7007 */ 
+.bubbles {
+  --c1: #570d4d; /* Recommendation: same background color */
+  --c2: #e0e0e0;
+  --size-letter: 15px;
+  padding: 0.5em 1em;
+  font-size: var(--size-letter);
+
+  background-color: transparent;
+  border: calc(var(--size-letter) / 6) solid var(--c2);
+  border-radius: 0.2em;
+  cursor: pointer;
+
+  overflow: hidden;
+  position: relative;
+  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.bubbles > .text {
+  font-weight: 700;
+  color: var(--c2);
+  position: relative;
+  z-index: 1;
+  transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.bubbles::before {
+  top: 0;
+  left: 0;
+}
+
+.bubbles::after {
+  top: 100%;
+  left: 100%;
+}
+
+.bubbles::before,
+.bubbles::after {
+  content: "";
+  width: 150%;
+  aspect-ratio: 1/1;
+  scale: 0;
+  transition: 1000ms cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--c2);
+  border-radius: 50%;
+
+  position: absolute;
+  translate: -50% -50%;
+}
+
+.bubbles:hover > .text {
+  color: var(--c1);
+}
+
+.bubbles:hover::before,
+.bubbles:hover::after {
+  scale: 1;
+}
+
+.bubbles:active {
+  scale: 0.98;
+  filter: brightness(0.9);
+}
+
+
+.button:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 8px 15px rgba(187,134,252,0.2);
+    border-color: #bb86fc;
 }
 
 
@@ -196,11 +326,12 @@ h2{
 /* ===== FOOTER ===== */
 
 .footer{
-    background:#111;
-    color:white;
+    background:#0a0a0a;
+    color:#a0a0a0;
     text-align:center;
     padding:30px;
     margin-top:50px;
+    border-top: 1px solid #222;
 }
 
 /* ===== Indice colapsabe fijo =====  */
@@ -220,24 +351,28 @@ h2{
 /* BOTON */
 .indice summary{
   position:absolute;
+  transform:translateY(-50%);
   right:100%;
-  top:0;
+  top:50%;
   height: 184px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
 
-  background:#333333;
-  color:white;
+  background:#1e1e1e;
+  color:#bb86fc;
   padding:10px 6px;
   cursor:pointer;
 
   border-radius:8px 0 0 8px;
-
+  transition: transform 0.8s ease, background 0.3s, color 0.3s;
+  border: 1px solid #333;
+  border-right: none;
+  box-shadow: -4px 0px 10px rgba(0,0,0,0.5);
 }
 
 /* MENU */
 .indice ul{
-  background:#867550;
+  background:#1e1e1e;
   padding:10px;
   margin:0;
   list-style:none;
@@ -248,7 +383,10 @@ h2{
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
   
-  
+  border: 1px solid #333;
+  border-right: none;
+  border-radius: 0 0 0 8px;
+  box-shadow: -4px 4px 15px rgba(0,0,0,0.5);
 }
 
 .indice li{
@@ -257,15 +395,17 @@ h2{
 
 .indice a{
   text-decoration:none;
-  color:#ffffff;
+  color:#e0e0e0;
 }
 
 .indice a:hover{
-  color:#08080870;
+  color:#bb86fc;
+  text-shadow: 0 0 8px rgba(187,134,252,0.4);
 }
 
 .indice summary:hover{
-  background:#333333;
+  background:#2c2c2c;
+  color: #d8b4fe;
 }
 
 .indice details[open] ul{
