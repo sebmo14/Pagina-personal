@@ -100,30 +100,8 @@ header h4 {
 }
 
 
-/* ===== MENÚ DE NAVEGACIÓN ===== */
-
-.nav-list{
-    list-style:none;
-    display:flex;
-    gap:25px;
-    user-select: none;
-}
 
 
-/* ===== LINKS DEL MENÚ ===== */
-
-.nav a{
-    text-decoration:none;
-    color:#222;
-    font-weight:bold;
-}
-
-
-/* ===== EFECTO HOVER EN MENÚ ===== */
-
-.nav a:hover{
-    color:#2563eb;
-}
 
 
 /* ===== HERO (SECCIÓN PRINCIPAL) ===== */
@@ -234,15 +212,6 @@ header h4 {
 }
 
 /* ===== Botones de contacto ===== */
-.button{
-    background:#570d4d;
-    padding:15px 25px;
-    border-radius:10px;
-    box-shadow:0 3px 8px rgba(0,0,0,0.4);
-    transition:transform 0.4s, box-shadow 0.4s, border-color 0.4s;
-    border: 1px solid #333;
-    color: #e0e0e0;
-}
 
 .bubbles {
   --c1: #570d4d; 
